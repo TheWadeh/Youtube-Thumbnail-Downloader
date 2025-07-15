@@ -29,12 +29,12 @@ const Footer = () => {
             <SafeIcon icon={FiHeart} className="text-red-500 text-sm" />
             <span>and</span>
             <SafeIcon icon={FiCode} className="text-blue-400 text-sm" />
-            <span>by developers</span>
+            <span>by <a href="https://wadehlife.abdulfetah.com" target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:underline">Abdulfetah Jemal</a></span>
           </div>
           
           <div className="mt-6 pt-6 border-t border-white/10">
             <p className="text-white/60 mb-4">
-              This site is powered by Wadeh Life. Visit for more tools:
+              This site is powered by <a href="https://wadehlife.abdulfetah.com" target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:underline">Wadeh Life</a>. Visit for more tools:
             </p>
             <div className="flex justify-center space-x-4">
               <a href="https://wadehlife.abdulfetah.com" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-pink-400 transition-colors duration-300">

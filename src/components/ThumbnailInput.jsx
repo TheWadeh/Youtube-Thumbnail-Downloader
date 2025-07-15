@@ -64,6 +64,9 @@ const ThumbnailInput = ({ onSubmit, loading, error }) => {
         <p className="text-white/60 text-sm mb-4">
           Supports: youtube.com/watch?v=VIDEO_ID, youtu.be/VIDEO_ID, or just VIDEO_ID
         </p>
+        <p className="text-white/60 text-sm mb-4">
+          Follow me for more cool projects :
+        </p>
         <div className="flex justify-center space-x-4">
           <a href="https://wadehlife.abdulfetah.com" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-pink-400 transition-colors duration-300">
             <SafeIcon icon={FiGlobe} className="text-2xl" />
