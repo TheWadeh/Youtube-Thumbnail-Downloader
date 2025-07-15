@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const { FiSearch, FiLoader, FiAlertCircle } = FiIcons;
+import { FiSearch, FiLoader, FiAlertCircle, FiGlobe, FiSend, FiLinkedin, FiYoutube } from 'react-icons/fi';
 
 const ThumbnailInput = ({ onSubmit, loading, error }) => {
   const [url, setUrl] = useState('');
@@ -20,7 +20,6 @@ const ThumbnailInput = ({ onSubmit, loading, error }) => {
       <motion.form 
         onSubmit={handleSubmit}
         className="relative"
-        whileHover={{ scale: 1.02 }}
         transition={{ type: "spring", stiffness: 300 }}
       >
         <div className="relative">
@@ -32,19 +31,21 @@ const ThumbnailInput = ({ onSubmit, loading, error }) => {
             className="w-full px-6 py-4 pr-16 text-lg bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300"
             disabled={loading}
           />
-          <motion.button
-            type="submit"
-            disabled={loading || !url.trim()}
-            className="absolute right-2 top-1/2 -translate-y-1/2 p-3 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-xl hover:from-red-600 hover:to-pink-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            {loading ? (
-              <SafeIcon icon={FiLoader} className="text-xl animate-spin" />
-            ) : (
-              <SafeIcon icon={FiSearch} className="text-xl" />
-            )}
-          </motion.button>
+          <div className="absolute inset-y-0 right-2 flex items-center">
+            <motion.button
+              type="submit"
+              disabled={loading || !url.trim()}
+              className="p-3 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-xl hover:from-red-600 hover:to-pink-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {loading ? (
+                <SafeIcon icon={FiLoader} className="text-xl animate-spin" />
+              ) : (
+                <SafeIcon icon={FiSearch} className="text-xl" />
+              )}
+            </motion.button>
+          </div>
         </div>
       </motion.form>
 
@@ -60,9 +61,23 @@ const ThumbnailInput = ({ onSubmit, loading, error }) => {
       )}
 
       <div className="mt-6 text-center">
-        <p className="text-white/60 text-sm">
+        <p className="text-white/60 text-sm mb-4">
           Supports: youtube.com/watch?v=VIDEO_ID, youtu.be/VIDEO_ID, or just VIDEO_ID
         </p>
+        <div className="flex justify-center space-x-4">
+          <a href="https://wadehlife.abdulfetah.com" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-pink-400 transition-colors duration-300">
+            <SafeIcon icon={FiGlobe} className="text-2xl" />
+          </a>
+          <a href="https://t.me/wadehlife" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-pink-400 transition-colors duration-300">
+            <SafeIcon icon={FiSend} className="text-2xl" />
+          </a>
+          <a href="https://linkedin.com/in/wadehlife" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-pink-400 transition-colors duration-300">
+            <SafeIcon icon={FiLinkedin} className="text-2xl" />
+          </a>
+          <a href="https://www.youtube.com/@wadehlife" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-pink-400 transition-colors duration-300">
+            <SafeIcon icon={FiYoutube} className="text-2xl" />
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-import { FiHeart, FiCode, FiYoutube, FiLinkedin, FiSend } from 'react-icons/fi';
+import { FiHeart, FiCode, FiYoutube, FiLinkedin, FiSend, FiGlobe } from 'react-icons/fi';
 
 const Footer = () => {
   return (
@@ -37,11 +37,17 @@ const Footer = () => {
               This site is powered by Wadeh Life. Visit for more tools:
             </p>
             <div className="flex justify-center space-x-4">
-              <a href="https://linkedin.com/in/wadeh-life" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">
+              <a href="https://wadehlife.abdulfetah.com" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-pink-400 transition-colors duration-300">
+                <SafeIcon icon={FiGlobe} className="text-2xl" />
+              </a>
+              <a href="https://t.me/wadehlife" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-pink-400 transition-colors duration-300">
+                <SafeIcon icon={FiSend} className="text-2xl" />
+              </a>
+              <a href="https://linkedin.com/in/wadeh-life" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-pink-400 transition-colors duration-300">
                 <SafeIcon icon={FiLinkedin} className="text-2xl" />
               </a>
-              <a href="https://t.me/wadehlife" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">
-                <SafeIcon icon={FiSend} className="text-2xl" />
+              <a href="https://www.youtube.com/@wadehlife" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-pink-400 transition-colors duration-300">
+                <SafeIcon icon={FiYoutube} className="text-2xl" />
               </a>
             </div>
             <p className="text-white/50 text-sm mt-6">
